@@ -24,3 +24,9 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .wrapper {
+    @apply bg-[#06092b] text-white w-full h-full p-12 text-center flex flex-col items-center justify-center;
+  }
+}
