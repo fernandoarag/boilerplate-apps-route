@@ -20,7 +20,8 @@ const eslintConfig = [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'prettier'
+    'prettier',
+    'plugin:storybook/recommended'
   ),
   ...compat.plugins('@typescript-eslint', 'react'),
   ...compat.config({
@@ -39,5 +40,13 @@ const eslintConfig = [
     },
   }),
 ]
+
+eslintConfig.push({
+  ignores: [
+    "!.storybook/**", // Mantém a pasta .storybook
+    "!.jest/**", // Mantém a pasta .jest
+    "!.generators/**", // Mantém a pasta .generators
+  ],
+});
 
 export default eslintConfig

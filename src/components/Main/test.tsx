@@ -20,6 +20,6 @@ describe('<Main />', () => {
     const { container } = render(<Main />)
 
     // busca o elemento e verifica a cor dele
-    expect(container.firstChild).toHaveStyle({ backgroundColor: '#06092b' })
+    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
   })
 })
