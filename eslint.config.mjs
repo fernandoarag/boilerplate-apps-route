@@ -38,15 +38,12 @@ const eslintConfig = [
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
+    ignores: [
+      "!.storybook/**", // Mantém a pasta .storybook
+      "!.jest/**", // Mantém a pasta .jest
+      "!.generators/**", // Mantém a pasta .generators
+    ],
   }),
 ]
-
-eslintConfig.push({
-  ignores: [
-    "!.storybook/**", // Mantém a pasta .storybook
-    "!.jest/**", // Mantém a pasta .jest
-    "!.generators/**", // Mantém a pasta .generators
-  ],
-});
 
 export default eslintConfig
